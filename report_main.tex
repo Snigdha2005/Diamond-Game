@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper, total={6.5in, 9in}]{geometry}
+\usepackage{url}
+
+\title{Developing Strategies for the Diamonds bidding Game using GenAI}
+\author{Sasi Snigdha Y}
+\date{March 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem Statement}
+\begin{text}
+\begin{large}
+The diamonds bidding card game is played in the following manner:
+\begin{itemize}
+\item Each player gets a suit of cards other than the diamond suit
+\item The banker (shuffles cards and keeps track of score) shuffles the diamond cards and puts each on auction one by one
+\item The person with the highest bid (according to the below order) gets the points of the diamond card
+\item In case of a tie, the points are distributed equally amongst the players
+\item Order: 2 $<$ 3 $<$ 4 $<$ 5 $<$ 6 $<$ 7 $<$ 8 $<$ 9 $<$ 10 $<$ J $<$ Q $<$ K $<$ A
+\item The person with the highest score wins
+\end{itemize}
+\end{large}
+\end{text}
+\vspace{12pt}
+
+\section{Teaching GenAI}
+\begin{text}
+\begin{large}
+I used ChatGPT for this assignment. I gave the rules and the setup information to ChatGPT. Initially, it interpreted that the diamond card will not be revealed by the banker before placing the bid. After 2 simulations of the game and explicitly stating the rules again, it understood the game well. During a trial game, it placed the same bid more than once and did not compare the bids correctly. The sequence of bids, diamond cards was wrong in all the trial games played. 
+\end{large}
+\end{text}
+
+\vspace{12pt}
+
+\section{Strategy Developed}
+\begin{text}
+\begin{large}
+The following approaches were suggested: 
+\begin{itemize}
+\item Dynamic Programming
+\item Reinforcement Learning - Q learning algorithm
+\end{itemize}
+A strategy to bid the maximum card that is available in the deck and is lesser than or equal to the diamond card was developed by ChatGPT using the DP approach. \\ \\
+Adaptive bidding strategy: Players observe the opponents bidding style and adjust their bidding accordingly. If the opponent's bidding is greater than a certain aggressiveness threshold, the highest card available is bid else lower card is bid if the value of the diamond card is $<$8. \\ \\ 
+Balanced Bidding strategy: Bidding is done aggressively if the card is a high value card and minimal bidding is done for lower value cards. \\ \\
+Dynamic Adaption strategy: If the opponent is aggressive and the score is high, bidding is done more cautiously. If the opponent is conservative and the score is low, bidding is done aggressively. \\ \\ 
+Random Bidding strategy: Randomly bid.
+\end{large}
+\end{text}
+
+\vspace{12pt}
+
+\section{Analysis and Conclusion}
+\begin{large}
+\begin{itemize}
+    \item ChatGPT understood the game well (after explaining 2 times) but could not simulate correctly.
+    \item Initially, the auctioned card was not taken into consideration while developing the strategies
+    \item Adaptive bidding - Limited by aggressiveness threshold
+    \item Balanced Bidding - Might not be optimal
+    \item Dynamic Adaptive bidding - Most adaptable but complex to implement
+    \item Clear instructions, prompts, feedback is vital
+\end{itemize}
+\end{large}
+\vspace{12pt}
+
+\section{Links}
+\begin{large}
+\url{https://chat.openai.com/share/31ce5418-458c-4ed3-9e66-1e15268e46fe}\\ \\
+\url{https://colab.research.google.com/drive/1uRKfNAtkTYEu1ZFuLtKM7zFPaH3sXGav?usp=sharing}
+\end{large}
+\end{document}
