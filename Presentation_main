@@ -1,0 +1,65 @@
+% Required for inserting images
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\title{Diamond Game Pygame Implementation using GenAI}
+\author{Group 9}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{frame}{Introduction}
+\begin{itemize}
+    \item Diamonds is a 2 or 3 player card game with 13 rounds
+    \item Use of GenAI to code in PyGame and learn Pygame
+    \item Reflections on the conversations with GenAI
+    \item GenAI used - ChatGPT, Gemini
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Approaches}
+\begin{itemize}
+    \item All steps, initial strategy code given
+    \item Gave just the rules of the game
+    \item Gave initial strategy code and highlighted important rules
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Demo}
+
+\end{frame}
+\begin{frame}{Challenges}
+\begin{itemize}
+    \item Full text GUI initially
+    \item Surface, Rect methods confusion
+    \item Transition, Delay issues
+    \item Debugging (Strategies messed up)
+    \item Infinite looping of the code
+    \item Determining positions for images
+    \item Colour scheme issue
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Learnings}
+\begin{itemize}
+    \item Documentation reference important
+    \item Learnt the basics of PyGame 
+    \item Give major inputs all at once
+    \item Explain errors in detail
+    \item Give example codes when needed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Future Scope}
+\begin{itemize}
+    \item Use of gifs, animations, transitions
+    \item Better strategies
+    \item Increase readability
+    \item Reduce redundancy
+    \item 3 Player implementation
+\end{itemize}
+\end{frame}
+\end{document}
